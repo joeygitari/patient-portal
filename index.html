@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Patients Registration Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="signup">
+            <div class="p-3">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
+                        <div class="outer-signup-card">
+                            <h3 class="text-center">Welcome To <span>Health Strat!</span></h3>
+                            <p class="text-center">Please fill in your details</p>
+                            <div id="successMessage" role="alert"></div>
+                            <div class="inner-signup-card">
+                                <form class="requires-validation" action="connect.php" method="POST" id="registration-form" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="full_name" class="required">Full Name</label>
+                                                <input type="text" id="full_name" autocomplete="off" class="form-control" name="full_name" placeholder="Full Name" required>
+                                                <div class="valid-feedback">Full Name field is valid!</div>
+                                                <div class="invalid-feedback">Full Name field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label  for="gender" class="required">Gender</label>
+                                                <select name="gender" id="gender" class="form-control">
+                                                    <!-- <option value="">Gender</option> -->
+                                                </select>
+                                                <div class="valid-feedback">Gender field is valid!</div>
+                                                <div class="invalid-feedback">Gender field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="idno" class="required">ID number</label>
+                                                <input type="text" id="idno" autocomplete="off" class="form-control" name="idno" placeholder="ID number" required>
+                                                <div class="valid-feedback">ID Number field is valid!</div>
+                                                <div class="invalid-feedback">ID Number field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="dob" class="required">Date of Birth</label>
+                                                <input type="date"  id="dob" autocomplete="off" class="form-control" name="dob" required>
+                                                <div class="valid-feedback">Date of Birth field is valid!</div>
+                                                <div class="invalid-feedback">Date of Birth field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="phone" class="required">Phone Number</label>
+                                                <input type="tel" id="phone" autocomplete="off" class="form-control" name="phone" placeholder="Phone Number" required>
+                                                <div class="valid-feedback">Phone Number field is valid!</div>
+                                                <div class="invalid-feedback">Phone Number field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email" class="required">Email Address</label>
+                                                <input type="email" id="email" autocomplete="off" class="form-control" name="email" placeholder="Email" required>
+                                                <div class="valid-feedback">Email field is valid!</div>
+                                                <div class="invalid-feedback">Email field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label  for="status" class="required">Marital Status</label>
+                                                <select name="status" id="status" class="form-control">
+                                                    <!-- <option value="">Marital Status</option> -->
+                                                </select>
+                                                <div class="valid-feedback">Marital status field is valid!</div>
+                                                <div class="invalid-feedback">Marital status field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="address" class="required">Address</label>
+                                                <input type="text" id="address" autocomplete="off" class="form-control" name="address" placeholder="Address" required>
+                                                <div class="valid-feedback">Address field is valid!</div>
+                                                <div class="invalid-feedback">Address field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label  for="county" class="required">County</label>
+                                                <select name="county" id="county" class="form-control">
+                                                    <!-- <option value="">County</option> -->
+                                                </select>
+                                                <div class="valid-feedback">County field is valid!</div>
+                                                <div class="invalid-feedback">County field cannot be blank!</div>
+                                            </div>
+                                        </div>
+                                    
+                                        <br/>
+
+                                        <section>
+                                            <h5>Next of Kin Details</h5>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="kin_name" class="required">Full Name</label>
+                                                        <input type="text" id="kin_name" autocomplete="off" class="form-control" name="kin_name" placeholder="Full Name" required>
+                                                        <div class="valid-feedback">Full Name field is valid!</div>
+                                                        <div class="invalid-feedback">Full Name field cannot be blank!</div>
+                                                    </div>
+                                                </div>
+                                    
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label  for="kin_gender" class="required">Gender</label>
+                                                        <select name="kin_gender" id="kin_gender" class="form-control">
+                                                            <!-- <option value="">Gender</option> -->
+                                                        </select>
+                                                        <div class="valid-feedback">Gender field is valid!</div>
+                                                        <div class="invalid-feedback">Gender field cannot be blank!</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="kin_idno" class="required">ID number</label>
+                                                        <input type="text" id="kin_idno" autocomplete="off" class="form-control" name="kin_idno" placeholder="ID number" required>
+                                                        <div class="valid-feedback">ID Number field is valid!</div>
+                                                        <div class="invalid-feedback">ID Number field cannot be blank!</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="kin_dob" class="required">Date of Birth</label>
+                                                        <input type="date"  id="kin_dob" autocomplete="off" class="form-control" name="kin_dob" required>
+                                                        <div class="valid-feedback">Date of Birth field is valid!</div>
+                                                        <div class="invalid-feedback">Date of Birth field cannot be blank!</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="kin_phone" class="required">Phone Number</label>
+                                                        <input type="tel" id="kin_phone" autocomplete="off" class="form-control" name="kin_phone" placeholder="Phone Number" required>
+                                                        <div class="valid-feedback">Phone Number field is valid!</div>
+                                                        <div class="invalid-feedback">Phone Number field cannot be blank!</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="relationship" class="required">Relationship</label>
+                                                        <input type="text" id="relationship" autocomplete="off" class="form-control" name="relationship" placeholder="Relationship" required>
+                                                        <div class="valid-feedback">Relationship field is valid!</div>
+                                                        <div class="invalid-feedback">Relationship field cannot be blank!</div>
+                                                    </div>
+                                                </div>
+                                        </section>
+                        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Create Account" class="btn btn-login" />
+                                            </div>
+                                       </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--JQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        
+         <!--Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+        <!--Custom JS-->
+        <script src="./js/events.js" async defer></script>
+        <script src="./js/index.js" async defer></script>
+        <script src="./js/app.js" async defer></script>
+    </body>
+</html>
